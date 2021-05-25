@@ -1,27 +1,11 @@
 <html>
     <head>
         <title>Exams</title>
-        <script src="tiny-mce.js"></script>
+        <script src="https://cdn.tiny.cloud/1/38hdrpix3gtvkixamx3fk4dfl43me74coyh9mk1bfkycw7wc/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     </head>
     <body>
 
         <textarea id="basic-example">
-            <p style="text-align: center;">
-            <img title="TinyMCE Logo" src="//www.tiny.cloud/images/glyph-tinymce@2x.png" alt="TinyMCE Logo" width="110" height="97" />
-            </p>
-        
-            <h2 style="text-align: center;">Welcome to the TinyMCE editor demo!</h2>
-        
-            <h2>Got questions or need help?</h2>
-        
-            <ul>
-            <li>Our <a href="https://www.tiny.cloud/docs/">documentation</a> is a great resource for learning how to configure TinyMCE.</li>
-            <li>Have a specific question? Try the <a href="https://stackoverflow.com/questions/tagged/tinymce" target="_blank" rel="noopener"><code>tinymce</code> tag at Stack Overflow</a>.</li>
-            <li>We also offer enterprise grade support as part of <a href="https://www.tiny.cloud/pricing">TinyMCE premium plans</a>.</li>
-            </ul>
-        
-            <h2>A simple table to play with</h2>
-        
             <table style="border-collapse: collapse; width: 100%;" border="1">
             <thead>
                 <tr>
@@ -43,21 +27,16 @@
                 </tr>
             </tbody>
             </table>
-        
-            <h2>Found a bug?</h2>
-        
-            <p>
-            If you think you have found a bug please create an issue on the <a href="https://github.com/tinymce/tinymce/issues">GitHub repo</a> to report it to the developers.
-            </p>
-        
-            <h2>Finally ...</h2>
-        
-            <p>
-            Don't forget to check out our other product <a href="http://www.plupload.com" target="_blank">Plupload</a>, your ultimate upload solution featuring HTML5 upload support.
-            </p>
-            <p>
-            Thanks for supporting TinyMCE! We hope it helps you and your users create great content.<br>All the best from the TinyMCE team.
-            </p>
         </textarea>  
+        <script>
+            tinymce.init({
+              selector: 'textarea',
+              plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker',
+              toolbar: 'a11ycheck addcomment showcomments casechange checklist code formatpainter pageembed permanentpen table',
+              toolbar_mode: 'floating',
+              tinycomments_mode: 'embedded',
+              tinycomments_author: 'Author name',
+           });
+          </script>
     </body>
 </html>
